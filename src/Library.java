@@ -18,7 +18,7 @@ public class Library {
 
     public void showTitlebook(){
         for(var bookData: libraryBooks){
-            System.out.println(bookData.title);
+            System.out.println(bookData.stock + " " +  bookData.title);
         }
     }
 
@@ -46,7 +46,8 @@ public class Library {
                     removeBooks(bookData);
                 }
                 Pedido pedidoNuevo = new Pedido(bookData.price, qty, bookData.title );
-                System.out.println("Se vendio el libro: " + pedidoNuevo.getTitle() + " " + " por valor de: " + pedidoNuevo.getPrice());
+                System.out.println("Se vendio el libro: " + pedidoNuevo.getTitle() + " " + " por valor de: " + "USD "+pedidoNuevo.getPrice() * qty);
+
             }
         }
     }

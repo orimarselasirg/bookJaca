@@ -14,14 +14,19 @@ public class Main {
 
         libraryList.addBooks(book1);
         libraryList.addBooks(book2);
+        libraryList.addBooks(book3);
+
         //System.out.println("libros: " + book1.stock);
         //book1.addStock(2);
         //book1.removeStock(5);
         libraryList.showTitlebook();
 
-        System.out.println(libraryList.toString());
+
         System.out.println("Que libro deseas pedir: ");
         String book =  scan.nextLine();
-        libraryList.bookSale(11, book);
+        System.out.println("Cuantos libros quieres: ");
+        int qty =  scan.nextInt();
+        libraryList.bookSale(qty, book);
+        libraryList.showTitlebook();
     }
 }
