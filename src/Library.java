@@ -36,9 +36,10 @@ public class Library {
     }
 
     public void bookSale(int qty, String title) {
+        System.out.println(title);
 
         for(var bookData: libraryBooks) {
-            if(bookData.title == title) {
+            if(bookData.title.equals(title)) {
                 if(bookData.stock > 1) {
                     bookData.removeStock(qty);
                 } else {
